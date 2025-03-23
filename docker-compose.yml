@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: jupyter-cadquery
+    image: ghcr.io/iashchak/cad-query-jupyter-docker:latest
     restart: unless-stopped
     ports:
       - "8888:8888"

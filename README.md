@@ -2,6 +2,10 @@
 
 [![Docker image](https://github.com/iashchak/cad-query-jupyter-docker/actions/workflows/build-image.yaml/badge.svg)](https://github.com/iashchak/cad-query-jupyter-docker/actions/workflows/build-image.yaml)
 
+| Previews                        | Copilot                          |
+| ------------------------------- | -------------------------------- |
+| ![Jupyter](./assets/editor.png) | ![Copilot](./assets/copilot.gif) |
+
 You can pick up that image if you:
 - [X] Have docker installed
 - [X] Have docker-compose installed
@@ -27,7 +31,7 @@ docker-compose up
 
 5. Profit
 
-## How to use the image
+## Start without compose
 1. Pull the image
 ```bash
 docker pull ghcr.io/iashchak/cad-query-jupyter-docker:latest
@@ -35,9 +39,20 @@ docker pull ghcr.io/iashchak/cad-query-jupyter-docker:latest
 
 2. Run the container
 ```bash
-docker run -p 8888:8888 ghcr.io/iashchak/cad-query-jupyter-docker:latest
+docker run -p 8888:8888 -v ./cq:/home/cq ghcr.io/iashchak/cad-query-jupyter-docker:latest
 ```
 
+3. [Open the link in your browser](http://localhost:8888)
+
+## Start with compose
+1. Download the docker-compose.yml
+```bash
+wget https://raw.githubusercontent.com/iashchak/cad-query-jupyter-docker/main/docker-compose.yml
+```
+2. Start the container
+```bash
+docker compose up
+```
 3. [Open the link in your browser](http://localhost:8888)
 
 ## FAQ
@@ -47,3 +62,5 @@ docker run -p 8888:8888 ghcr.io/iashchak/cad-query-jupyter-docker:latest
 - **Q**: Can i use it for production?
 - **A**: Nah. Only for local development.
 
+- **Q**: How to configure Copilot?
+- **A**: Follow the instructions in the [plugin repository](https://github.com/baolong281/jupyter-copilot)
