@@ -1,5 +1,7 @@
 # Cad Query with Jupyter in docker
 
+[![Docker image](https://github.com/iashchak/cad-query-jupyter-docker/actions/workflows/build-image.yaml/badge.svg)](https://github.com/iashchak/cad-query-jupyter-docker/actions/workflows/build-image.yaml)
+
 You can pick up that image if you:
 - [X] Have docker installed
 - [X] Have docker-compose installed

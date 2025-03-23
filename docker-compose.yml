@@ -1,0 +1,11 @@
+services:
+  jupyter-cadquery:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jupyter-cadquery
+    restart: unless-stopped
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./cq:/home/cq
