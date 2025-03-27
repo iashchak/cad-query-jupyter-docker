@@ -55,6 +55,14 @@ docker compose up
 ```
 3. [Open the link in your browser](http://localhost:8888)
 
+## Start code-server
+1. Open a new terminal window
+2. Run the following command to start code-server
+```bash
+docker exec -it <container_id> code-server
+```
+3. [Open the link in your browser](http://localhost:8080)
+
 ## FAQ
 - **Q**: Can i expose it to the internet?
 - **A**: You can, but you shouldn't. Copilot config present as server plugin, so it will be exposed to the internet. But as for local development in secure networks when you can trust everyone around you - it's fine.
